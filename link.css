@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  background-color: #112558;
+}
+
+.mainparent {
+  height: 99.7vh;
+  padding: 1px;
+}
+
+.child {
+  background-color: white;
+  position: relative;
+  top: 40%;
+  width: 45%;
+  height: 22%;
+  align-content: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  text-align: center;
+  color: #112558;
+  font-size: 65px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  box-shadow: 0 14px 15px rgba(0, 0, 0, 0.801);
+}
+
+.second-parent {
+  width: 300px;
+  background-color: white;
+  position: absolute;
+  right: -300px;
+  top: 60px;
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+}
+
+.second-child {
+  height: 60px;
+  width: 60px;
+  background-color: white;
+  left: -60px;
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+  display: inline-block;  
+}
+
+.main-btn-div {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.main-btn-div h1 {
+  align-self: flex-start;
+  display: inline-block;
+  margin-top: -50px;
+  border-bottom:1px solid #112558;
+}
+
+.heading-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px ;
+}
+
+
+
+.fa-gear{
+  color: #112558;
+  font-size: xxx-large;
+  margin-top: 5px;
+  margin-left: 6px;
+  position: relative;
+  z-index: 100000;
+  /* animation: spin 2s linear infinite; --> in this not accurately work so i do this in js. */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.right {
+  right: 0;
+}
+
+.all-btns  {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap:20px;
+  justify-content: space-around;
+}
+
+.btn{
+  height:78px;
+  width:78px;
+  border-radius:80px;
+  border:none;
+  cursor: pointer;  
+}
+
+.one{
+  background-color:#112558;
+}
+
+.two{
+  background-color:#9AE441;
+}
+
+.three{
+  background-color:#FF2072;
+}
+
+.four{
+  background-color:#3AB9F1;
+}
+
+.five{
+  background-color:#FFC600;
+}
+
+.six{
+  background-color:#6B089C;
+}
+
+.seven{
+  background-color:#5F9EA0;
+}
+
+.eight{
+  background-color:#CD5C5C;
+}
+
+.nine{
+  background-color:#FF7F50;
+}
+
