@@ -1,6 +1,3 @@
-    alert("Welcome To Color-switcher-project")
-
-
 const body = document.querySelector("body")
 const parent = document.querySelector(".mainparent")
 const child = document.querySelector(".child")

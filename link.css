@@ -1,25 +1,31 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   overflow: hidden;
   background-color: #112558;
+  min-height: 100vh;
 }
 
 .mainparent {
-  height: 99.7vh;
+  min-height: 99.7vh;
   padding: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Main White Box */
 .child {
   background-color: white;
   position: relative;
-  top: 40%;
+  top: auto;
   width: 45%;
-  height: 22%;
-  align-content: center;
+  min-height: 22%;
+  padding: 30px 20px;
   margin: 0 auto;
   border-radius: 10px;
   text-align: center;
@@ -27,10 +33,16 @@ body {
   font-size: 65px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   box-shadow: 0 14px 15px rgba(0, 0, 0, 0.801);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Settings Panel */
 .second-parent {
   width: 300px;
+  max-width: 90vw;
   background-color: white;
   position: absolute;
   right: -300px;
@@ -38,8 +50,10 @@ body {
   transition: 1s;
   display: flex;
   flex-direction: column;
+  border-radius: 0 0 0 10px;
 }
 
+/* Gear Button */
 .second-child {
   height: 60px;
   width: 60px;
@@ -48,41 +62,39 @@ body {
   position: relative;
   z-index: 100;
   cursor: pointer;
-  display: inline-block;  
+  display: inline-block;
 }
 
 .main-btn-div {
   display: flex;
   flex-direction: column;
-
 }
 
 .main-btn-div h1 {
   align-self: flex-start;
   display: inline-block;
   margin-top: -50px;
-  border-bottom:1px solid #112558;
+  border-bottom: 1px solid #112558;
 }
 
 .heading-2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 10px ;
+  padding-bottom: 10px;
 }
 
-
-
-.fa-gear{
+/* Gear Icon */
+.fa-gear {
   color: #112558;
   font-size: xxx-large;
   margin-top: 5px;
   margin-left: 6px;
   position: relative;
   z-index: 100000;
-  /* animation: spin 2s linear infinite; --> in this not accurately work so i do this in js. */
 }
 
+/* Gear Animation */
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -97,54 +109,192 @@ body {
   right: 0;
 }
 
-.all-btns  {
+/* Buttons Container */
+.all-btns {
   display: flex;
   flex-wrap: wrap;
-  row-gap:20px;
+  row-gap: 20px;
+  column-gap: 10px;
   justify-content: space-around;
+  padding: 10px;
 }
 
-.btn{
-  height:78px;
-  width:78px;
-  border-radius:80px;
-  border:none;
-  cursor: pointer;  
+/* Round Buttons */
+.btn {
+  height: 78px;
+  width: 78px;
+  min-width: 78px;
+  border-radius: 80px;
+  border: none;
+  cursor: pointer;
 }
 
-.one{
-  background-color:#112558;
+/* Button Colors */
+.one {
+  background-color: #112558;
 }
 
-.two{
-  background-color:#9AE441;
+.two {
+  background-color: #9AE441;
 }
 
-.three{
-  background-color:#FF2072;
+.three {
+  background-color: #FF2072;
 }
 
-.four{
-  background-color:#3AB9F1;
+.four {
+  background-color: #3AB9F1;
 }
 
-.five{
-  background-color:#FFC600;
+.five {
+  background-color: #FFC600;
 }
 
-.six{
-  background-color:#6B089C;
+.six {
+  background-color: #6B089C;
 }
 
-.seven{
-  background-color:#5F9EA0;
+.seven {
+  background-color: #5F9EA0;
 }
 
-.eight{
-  background-color:#CD5C5C;
+.eight {
+  background-color: #CD5C5C;
 }
 
-.nine{
-  background-color:#FF7F50;
+.nine {
+  background-color: #FF7F50;
 }
 
+
+/* ============================= */
+/* TABLET */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .child {
+    width: 70%;
+    min-height: 20%;
+    padding: 25px 15px;
+    font-size: 48px;
+  }
+
+  .second-parent {
+    width: 280px;
+    right: -280px;
+  }
+
+  .second-child {
+    width: 55px;
+    height: 55px;
+    left: -55px;
+  }
+
+  .fa-gear {
+    font-size: 40px;
+  }
+
+  .btn {
+    width: 70px;
+    height: 70px;
+  }
+
+  .all-btns {
+    row-gap: 15px;
+  }
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 480px) {
+
+  .mainparent {
+    min-height: 100vh;
+    padding: 15px;
+  }
+
+  .child {
+    width: 90%;
+    min-height: 18%;
+    padding: 20px 10px;
+    font-size: 32px;
+    border-radius: 8px;
+  }
+
+  .second-parent {
+    width: 240px;
+    max-width: 80vw;
+    right: -240px;
+    top: 45px;
+  }
+
+  .second-child {
+    width: 50px;
+    height: 50px;
+    left: -50px;
+  }
+
+  .fa-gear {
+    font-size: 35px;
+    margin-top: 7px;
+    margin-left: 5px;
+  }
+
+  .main-btn-div h1 {
+    font-size: 22px;
+    margin-top: -35px;
+  }
+
+  .heading-2 {
+    padding-bottom: 8px;
+  }
+
+  .all-btns {
+    gap: 12px;
+    padding: 12px;
+    justify-content: center;
+  }
+
+  .btn {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+  }
+}
+
+
+/* ============================= */
+/* VERY SMALL MOBILE */
+/* ============================= */
+
+@media (max-width: 360px) {
+
+  .child {
+    width: 94%;
+    font-size: 27px;
+    padding: 18px 8px;
+  }
+
+  .second-parent {
+    width: 220px;
+    right: -220px;
+  }
+
+  .all-btns {
+    gap: 8px;
+  }
+
+  .btn {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+  }
+
+  .fa-gear {
+    font-size: 30px;
+  }
+}
